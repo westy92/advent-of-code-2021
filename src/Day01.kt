@@ -13,7 +13,7 @@ fun main() {
     fun part2(lines: List<String>): Int {
         var increases = 0
         val intLines = lines.mapNotNull { it.toIntOrNull() }
-        var group = intLines.take(3).toMutableList()
+        val group = intLines.take(3).toMutableList()
         var previous = group.sum()
         for (line in intLines.drop(3)) {
             group.removeFirst()
