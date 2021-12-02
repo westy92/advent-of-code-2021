@@ -1,4 +1,5 @@
 fun main() {
+    val name = "Day01"
     fun part1(lines: List<String>): Int {
         var increases = 0
         var previous = lines.firstOrNull()?.toIntOrNull() ?: return 0
@@ -25,8 +26,8 @@ fun main() {
         return increases
     }
 
-    val testInput = readInput("Day01_test")
-    val lines = readInput("Day01")
+    val testInput = readInput("${name}_test")
+    val lines = readInput(name)
     check(part1(testInput) == 7)
     println(part1(lines))
 
